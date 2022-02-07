@@ -22,7 +22,7 @@ def is_int(s):
     return True
 
 
-def func():
+def main():
     print('Input number of answer\'s number of digits '
         + '(if input other chars means 5) : ', end='', flush=True)
     s = stdin.readline().rstrip()
@@ -49,4 +49,4 @@ def func():
 
 
 if __name__ == '__main__':
-    func()
+    main()
