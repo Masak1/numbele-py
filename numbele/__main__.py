@@ -30,6 +30,8 @@ def main():
     numbele = Numbele(number_of_digits, False)
     print('Let\'s start the game!')
 
+    color_squares_list = []
+
     while (True):
         print('Input ' + str(number_of_digits)
             + ' numbers you expect : ', end='', flush=True)
@@ -40,12 +42,17 @@ def main():
         numbele.check_number(expect_num)
 
         color_squares = ''.join(get_color_squares(numbele.answer_check_list))
+        color_squares_list.append(color_squares)
         print(color_squares, flush=True)
         if color_squares.count('🟩') == number_of_digits:
             break
 
     print('Congratulations!\nAnswer number is ' + numbele.answer_num,
         flush=True)
+
+    print('Your answers', flush=True)
+    for squares in color_squares_list:
+        print(squares, flush=True)
 
 
 if __name__ == '__main__':
