@@ -1,2 +1,3 @@
-# numbele-py
-numbele written in python
+# numberle-py
+
+Numberle is inspired by [Wordle](https://www.powerlanguage.co.uk/wordle/)
