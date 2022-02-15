@@ -1,4 +1,6 @@
 from sys import stdin
+import urllib.parse
+
 from numberle.numberle import Numberle
 
 
@@ -53,6 +55,10 @@ def main():
     print('Your answers', flush=True)
     for squares in color_squares_list:
         print(squares, flush=True)
+    
+    tweet_text = 'https://twitter.com/intent/tweet?text='+ urllib.parse.quote(
+        'Numberle\n\n'+ '\n'.join(color_squares_list))
+    print('Tweet url : ' + tweet_text)
 
 
 if __name__ == '__main__':
